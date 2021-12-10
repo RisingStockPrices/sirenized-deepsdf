@@ -20,3 +20,8 @@ data2/
 ddata/
 02681156/
 *.npz
+*/TrainingMeshes
+*.h
+src/
+third-party/
+CMakeLists.txt
