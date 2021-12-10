@@ -11,5 +11,4 @@ data2/
 *.ply
 */Reconstructions
 */TrainingMeshes
-data/
-data
+.npz
