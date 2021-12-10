@@ -42,21 +42,14 @@ def code_to_mesh(experiment_directory, checkpoint, keep_normalized=False):
     decoder.eval()
 
     latent_vectors = ws.load_latent_vectors(experiment_directory, checkpoint)
-<<<<<<< HEAD
-
-=======
     latent_vectors = latent_vectors.cuda()
->>>>>>> 2dba2a6a14111cc7cc8f5643cc860f2f8401d0f9
     train_split_file = specs["TrainSplit"]
 
     with open(train_split_file, "r") as f:
         train_split = json.load(f)
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 2dba2a6a14111cc7cc8f5643cc860f2f8401d0f9
     data_source = specs["DataSource"]
 
     instance_filenames = deep_sdf.data.get_instance_filenames(data_source, train_split)
@@ -64,20 +57,13 @@ def code_to_mesh(experiment_directory, checkpoint, keep_normalized=False):
     print(len(instance_filenames), " vs ", len(latent_vectors))
 
     for i, latent_vector in enumerate(latent_vectors):
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 2dba2a6a14111cc7cc8f5643cc860f2f8401d0f9
         dataset_name, class_name, instance_name = instance_filenames[i].split("/")
         instance_name = instance_name.split(".")[0]
 
         print("{} {} {}".format(dataset_name, class_name, instance_name))
 
-<<<<<<< HEAD
-=======
         #import pdb; pdb.set_trace();
->>>>>>> 2dba2a6a14111cc7cc8f5643cc860f2f8401d0f9
         mesh_dir = os.path.join(
             experiment_directory,
             ws.training_meshes_subdir,
@@ -143,11 +129,7 @@ if __name__ == "__main__":
     arg_parser.add_argument(
         "--keep_normalization",
         dest="keep_normalized",
-<<<<<<< HEAD
-        default=False,
-=======
         default=True,
->>>>>>> 2dba2a6a14111cc7cc8f5643cc860f2f8401d0f9
         action="store_true",
         help="If set, keep the meshes in the normalized scale.",
     )

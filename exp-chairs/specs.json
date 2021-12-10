@@ -1,10 +1,6 @@
 {
   "Description" : [ "This experiment learns a shape representation for chairs "],
-<<<<<<< HEAD
   "DataSource" : "lala",
-=======
-  "DataSource" : "data",
->>>>>>> 2dba2a6a14111cc7cc8f5643cc860f2f8401d0f9
   "TrainSplit" : "exp-chairs/new_split.json",
   "TestSplit" : "examples/splits/sv2_chairs_test.json",
   "NetworkArch" : "deep_sdf_decoder",
@@ -21,11 +17,7 @@
     },
   "CodeLength" : 256,
   "NumEpochs" : 2001,
-<<<<<<< HEAD
-  "SnapshotFrequency" : 200,
-=======
   "SnapshotFrequency" : 100,
->>>>>>> 2dba2a6a14111cc7cc8f5643cc860f2f8401d0f9
   "AdditionalSnapshots" : [ 100, 500 ],
   "LearningRateSchedule" : [
     {
@@ -40,15 +32,9 @@
       "Interval" : 500,
       "Factor" : 0.5
     }],
-<<<<<<< HEAD
   "SamplesPerScene" : 2938,
   "ScenesPerBatch" : 128,
   "DataLoaderThreads" : 32,
-=======
-  "SamplesPerScene" : 16384,
-  "ScenesPerBatch" : 32,
-  "DataLoaderThreads" : 16,
->>>>>>> 2dba2a6a14111cc7cc8f5643cc860f2f8401d0f9
   "ClampingDistance" : 0.1,
   "CodeRegularization" : true,
   "CodeRegularizationLambda" : 1e-4

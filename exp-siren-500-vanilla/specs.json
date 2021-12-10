@@ -1,9 +1,9 @@
 {
   "Description" : [ "This experiment learns a shape representation for chairs "],
-  "DataSource" : "data",
-  "TrainSplit" : "exp-chairs/new_split.json",
+  "DataSource" : "lala",
+  "TrainSplit" : "exp-siren-data500-sample8000-batch64/train_500_split.json",
   "TestSplit" : "examples/splits/sv2_chairs_test.json",
-  "NetworkArch" : "deep_sdf_decoder_siren",
+  "NetworkArch" : "decoder_siren_vanilla",
   "NetworkSpecs" : {
     "dims" : [ 512, 512, 512, 512, 512, 512, 512, 512 ],
     "dropout" : [0, 1, 2, 3, 4, 5, 6, 7],
@@ -38,6 +38,6 @@
   "ClampingDistance" : 0.1,
   "CodeRegularization" : true,
   "CodeRegularizationLambda" : 1e-4,
-  "CodeBound": 1.0
+  "CodeBound" : 1.0
 }
 

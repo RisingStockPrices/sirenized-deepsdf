@@ -1,6 +1,6 @@
 {
   "Description" : [ "This experiment learns a shape representation for chairs "],
-  "DataSource" : "lala",
+  "DataSource" : "data",
   "TrainSplit" : "exp-siren-data500-sample8000-batch64/train_500_split.json",
   "TestSplit" : "examples/splits/sv2_chairs_test.json",
   "NetworkArch" : "deep_sdf_decoder_siren",
