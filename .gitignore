@@ -11,3 +11,4 @@ data2/
 *.ply
 */Reconstructions
 */TrainingMeshes
+data/
