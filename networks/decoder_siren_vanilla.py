@@ -124,7 +124,7 @@ class Decoder(nn.Module):
             elif layer != 0 and self.xyz_in_all:
                 x = torch.cat([x, xyz], 1)
             x = lin(x)
-            x=self.sin(x)
+            x=self.sine(x)
             """
             # last layer Tanh
             if layer == self.num_layers - 2 and self.use_tanh:
