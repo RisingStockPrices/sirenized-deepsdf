@@ -254,7 +254,8 @@ def main_function(experiment_directory, continue_from, batch_split):
 
     specs = ws.load_experiment_specifications(experiment_directory)
 
-    logging.info("Experiment description: \n" + specs["Description"])
+    #import pdb; pdb.set_trace()
+    logging.info("Experiment description: \n" + ' '.join(specs["Description"]))
 
     data_source = specs["DataSource"]
     train_split_file = specs["TrainSplit"]
@@ -325,7 +326,8 @@ def main_function(experiment_directory, continue_from, batch_split):
     code_reg_lambda = get_spec_with_default(specs, "CodeRegularizationLambda", 1e-4)
 
     code_bound = get_spec_with_default(specs, "CodeBound", None)
-
+    #import pdb; pdb.set_trace()
+    
     decoder = arch.Decoder(latent_size, **specs["NetworkSpecs"]).cuda()
 
     logging.info("training with {} GPU(s)".format(torch.cuda.device_count()))

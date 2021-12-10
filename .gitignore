@@ -1,0 +1,13 @@
+lala.npz
+__pycache__/
+CLI11/
+bin/
+build/
+npz_to_ply/
+third-party/Pangolin/
+ShapeNetCore.v2/
+data2/
+*.pth
+*.ply
+*/Reconstructions
+*/TrainingMeshes

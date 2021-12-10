@@ -1,10 +1,11 @@
 project("DeepSDF")
 cmake_minimum_required(VERSION 3.0)
 
-find_package(CLI11 CONFIG REQUIRED)
+set(CMAKE_CXX_STANDARD 17)
 find_package(Eigen3 REQUIRED)
-find_package(nanoflann REQUIRED)
 find_package(Pangolin REQUIRED)
+find_package(nanoflann REQUIRED)
+find_package(CLI11 CONFIG REQUIRED)
 
 add_subdirectory(third-party/cnpy)
 
