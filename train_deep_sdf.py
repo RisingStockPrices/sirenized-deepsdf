@@ -462,20 +462,17 @@ def main_function(experiment_directory, continue_from, batch_split):
         adjust_learning_rate(lr_schedules, optimizer_all, epoch)
 
         for sdf_data, indices in sdf_loader:
-
             # Process the input data
             sdf_data = sdf_data.reshape(-1, 4)
 
             num_sdf_samples = sdf_data.shape[0]
 
             sdf_data.requires_grad = False
-
             xyz = sdf_data[:, 0:3]
             sdf_gt = sdf_data[:, 3].unsqueeze(1)
 
             if enforce_minmax:
                 sdf_gt = torch.clamp(sdf_gt, minT, maxT)
-
             xyz = torch.chunk(xyz, batch_split)
             indices = torch.chunk(
                 indices.unsqueeze(-1).repeat(1, num_samp_per_scene).view(-1),
@@ -491,7 +488,6 @@ def main_function(experiment_directory, continue_from, batch_split):
             for i in range(batch_split):
 
                 batch_vecs = lat_vecs(indices[i])
-
                 input = torch.cat([batch_vecs, xyz[i]], dim=1)
 
                 # NN optimization

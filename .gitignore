@@ -1,3 +1,9 @@
+
+CLI11/
+Pangolin/
+nanoflann/
+lala/
+third-party/
 lala.npz
 __pycache__/
 CLI11/
@@ -13,3 +19,11 @@ data2/
 */TrainingMeshes
 .npz
 */.datasources.json
+ddata/
+02681156/
+*.npz
+*/TrainingMeshes
+*.h
+src/
+third-party/
+CMakeLists.txt
